@@ -2,9 +2,14 @@
 import { useState } from "react";
 import Image from "next/image";
 import Card from "../../components/dashboardCard";
+import Navbar from "../../components/navbar";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Calendar from 'react-calendar';
+
+import { motion, useAnimation, Variants, useScroll } from "framer-motion"// React
+import { inView } from "framer-motion"
+import { useInView } from "react-intersection-observer";
 
 // swiper
 import 'swiper/css';
@@ -15,26 +20,47 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 //react calendar
 import 'react-calendar/dist/Calendar.css';
 
-type ValuePiece = Date | null;
+import FeaturedImageGallery from "../../components/featuredImageGallery";
+import Footer from "../../components/footer";
+import WhatsApp from "../../components/whatsapp";
+import Banner1 from "../../public/img/4.jpg"
+import Banner2 from "../../public/img/5.png"
+import Banner3 from "../../public/img/3.jpg"
 
+type ValuePiece = Date | null;
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
 export default function Home() {
+  const exampleVariant = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  }
+  const control = useAnimation()
+const [ref, inView] = useInView()
   const [value, onChange] = useState<Value>(new Date());
+  const { scrollYProgress } = useScroll();
+  const cardVariants: Variants = {
+    offscreen: {
+      x: -80
+    },
+    onscreen: {
+      x: 0,
+      // rotate: -10,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.8
+      }
+    }
+  };
   return (
-    <div className="bg-gray-100 w-screen min-h-screen overflow-x-hidden">
-      <nav className="fixed z-50 bg-white shadow-lg h-[90px] w-full px-10 flex items-center justify-between text-gray-600">
-        <h1 className="text-xl font-bold">icon</h1>
-        <div className="flex items-center justify-end space-x-4">
-          <h3 className="text-md">list 1</h3>
-          <h3 className="text-md">list 1</h3>
-          <h3 className="text-md">list 1</h3>
-          <h3 className="text-md">list 1</h3>
-          <h3 className="text-md">list 1</h3>
-        </div>
-      </nav>
+    <motion.div 
+    
+    className="bg-gray-100 w-screen min-h-screen overflow-x-hidden">
+      {/* navbar */}
+      <Navbar />
       {/* heading */}
-      <div className="bg-gray-300 w-full h-screen relative m-0 p-0 overflow-x-hidden">
+      <div className="bg-gray-300 z-20 w-full h-screen mt-[90px] relative m-0 p-0 overflow-x-hidden">
       <Swiper 
         centeredSlides={true}
         autoplay={{
@@ -47,30 +73,60 @@ export default function Home() {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]} className="mySwiper">
         <SwiperSlide>
-          <div className="bg-red-400 w-full h-full">
-            1
+          <div className="w-full h-full relative">
+            <Image src={Banner1} alt="banner 1"  className="absolute top-0 left-0 z-40 w-full h-full object-contain" />
+          </div>
+          
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className="w-full h-full relative">
+            <Image src={Banner2} alt="banner 1"  className="absolute top-0 left-0 z-40 w-full h-full object-contain" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-green-400 w-full h-full">
-            1
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-blue-400 w-full h-full">
-            1
+        <div className="w-full h-full relative">
+            <Image src={Banner3} alt="banner 1"  className="absolute top-0 left-0 z-40 w-full h-full object-contain" />
           </div>
         </SwiperSlide>
       </Swiper>
       </div>
-      {/* section 2 */}
-      <div className="w-[80vw] mx-auto h-[60vh] flex items-center justify-between">
-        <p className="flex-[0.45] text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro aut impedit consequuntur hic mollitia illo iste modi expedita.</p>
-        <div className="bg-gray-400 rounded-xl w-[240px] h-[240px]"></div>
+      {/* section 2  bg-[#ff7f00]*/}
+      <div className="w-full flex flex-col bg-[#1c2d8c] from-[#ff7f00] to-[#ed831a]">
+        <div className=" w-[80vw] mx-auto h-[80vh] flex items-center justify-between">
+          <motion.div 
+          // animate={{ x: 100 }}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: false, amount: 0.8 }}
+          variants={cardVariants}
+          className="flex-[0.50] flex flex-col space-y-3">
+            <h1 className="text-6xl font-extrabold text-gray-50 ">tentang <span className="text-[#ff7f00]">perpenka</span></h1>
+            <p className=" text-gray-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolores quis, laborum aperiam ducimus possimus! Recusandae error dolorem quae esse officiis molestias explicabo voluptatum laborum. Tempore eaque labore molestiae corporis, qui neque, non, nulla provident voluptate rerum quas beatae eum?</p>
+            <div className="flex flex-col space-y-4">
+              <div className="w-full h-1 rounded bg-gray-50 opacity-75"></div>
+              <div className="flex items-center space-x-8">
+                <div className="flex flex-col items-center space-y-2">
+                  <h1 className="text-3xl font-extrabold text-gray-50">5000<span>+</span></h1>
+                  <p className="text-md font-light text-gray-50">peserta</p>
+                </div>
+                <div className="flex flex-col items-center space-y-2">
+                  <h1 className="text-3xl font-extrabold text-gray-50">20<span>+</span></h1>
+                  <p className="text-md font-light text-gray-50">acara tahunan</p>
+                </div>
+                <div className="flex flex-col items-center space-y-2">
+                  <h1 className="text-3xl font-extrabold text-gray-50">50<span>+</span></h1>
+                  <p className="text-md font-light text-gray-50">kota/kabupaten</p>
+                </div>
+              </div>
+
+            </div>
+          </motion.div>
+          <div className="bg-gray-400 rounded-xl w-[240px] h-[240px]"></div>
+        </div>
       </div>
       {/* section 3 */}
-      <div className="w-[80vw] mx-auto h-screen flex flex-col space-y-4 items-center bg-yellow-400">
-        <h1 className="text-3xl font-extrabold text-gray-600">LATEST NEWS</h1>
+      <div className="w-[80vw] mx-auto h-screen flex flex-col space-y-4 items-center mt-10">
+        <h1 className="text-4xl font-extrabold text-gray-600">LATEST NEWS</h1>
         <div className="flex items-center justify-center space-x-5 w-full h-[80%]">
           <Card judul="judul 1"  />
           <Card judul="judul 2"  />
@@ -78,11 +134,47 @@ export default function Home() {
         </div>
       </div>
       {/* section 4 */}
-      <div className="h-screen w-[80vw] mx-auto bg-gray-500">
-        <div className="bg-white shadow-lg w-[30vw] h-[60vh]">
-        <Calendar className={`text-gray-600 h-[400px]`} onChange={onChange} value={value} />
+      <div className="w-full flex flex-col items-center space-y-8 py-10">
+        <h1 className="text-4xl font-extrabold text-gray-600">GALERI</h1>
+        <FeaturedImageGallery />
+      </div>
+      {/* section 5 */}
+      <div className="w-full bg-[1c2d8c] bg-gradient-to-tr from-[#ff7f00] to-[#e9841e] py-10 my-10">
+        <div className=" w-[80vw] mx-auto flex flex-col space-y-10 items-center">
+          <h1 className="text-4xl font-extrabold text-gray-50">AGENDA</h1>
+          <div className="flex items-start justify-center space-x-8 w-full ">
+          <Calendar className={`flex-[0.4] text-gray-50 h-[400px] rounded-lg shadow-lg `} onChange={onChange} value={value} />
+          <div className="flex-[0.55] flex flex-col space-y-8">
+            <div className="flex flex-col space-y-1">
+              <div className="flex space-x-2 items-center">
+                <div className="bg-blue-400 h-[35px] w-1 rounded "></div>
+                <h1 className="text-2xl font-semibold text-gray-50">April</h1>
+              </div>
+              <p className="text-gray-50 ml-3 text-sm">Tidak ada Kegiatan.</p>
+            </div>
+            <div className="flex flex-col space-y-1">
+              <div className="flex space-x-2 items-center">
+                <div className="bg-blue-400 h-[35px] w-1 rounded "></div>
+                <h1 className="text-2xl font-semibold text-gray-50">Tempat</h1>
+              </div>
+              <p className="text-gray-50 ml-3 text-sm">20 April 2024</p>
+            </div>
+            <div className="flex flex-col space-y-1">
+              <div className="flex space-x-2 items-center">
+                <div className="bg-blue-400 h-[35px] w-1 rounded "></div>
+                <h1 className="text-2xl font-semibold text-gray-50">Waktu</h1>
+              </div>
+              <p className="text-gray-50 ml-3 text-sm">11:00 AM</p>
+            </div>
+          </div>
+          </div>
         </div>
       </div>
-    </div>
+      {/*  */}
+      {/* contact */}
+      <WhatsApp />
+      {/* footer */}
+      <Footer />
+    </motion.div>
   );
 }

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,20 +14,67 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+    overflow-x: hidden;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+input {
+  @apply px-2;
+}
+  .fc-header-toolbar {
+    display: inline-block;
+    padding: 4px 4px;
+    
+    @apply space-x-8;
+}
+
+.fc-day {
+  @apply m-8;
+}
+
+.fc-scrollgrid-sync-table {
+  @apply w-full;
+}
+
+.fc-view {
+  @apply w-full h-full lg:h-3/4 xl:h-2/3 bg-white;
+}
+
+.fc-h-event {
+  @apply bg-violet-500 border border-violet-600 ;
+  
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  @apply bg-violet-100 ;
+}
+
+.fc .fc-button{
+  @apply bg-orange-400 hover:bg-orange-300  ;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  @apply bg-orange-400;
+}
+
+.fc .fc-button-primary:disabled {
+  @apply bg-orange-400;
+}
+.fc-v-event {
+  @apply bg-orange-400 border border-orange-400 ;
+  
 }
