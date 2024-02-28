@@ -1,7 +1,7 @@
 "use client"
 import React, {useEffect, useState} from 'react'
 import Image from 'next/image';
-import Logo from "../public/img/logo.jpg"
+import Logo from "../public/img/logofix.png"
 import "../src/app/globals.css";
 
 import { LuMenu } from "react-icons/lu";
@@ -17,13 +17,20 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { motion, useScroll } from "framer-motion";
 import { Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Input, Radio, RadioGroup, Stack, useDisclosure } from '@chakra-ui/react'
 
-function Navbar() {
+
+type UseColorProps = {
+  isGray: boolean;
+}
+function Navbar({isGray}: UseColorProps) {
   interface UseDisclosure {
     isOpen: boolean;
     onOpen: () => void;
     onClose: () => void;
   }
   
+  const [showNavbar, setShowNavbar] = useState(false);
+  const [navbarHeight, setNavbarHeight] = useState(90); // Tinggi navbar awal
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
   // Replace 'any' with appropriate types if possible
   const { isOpen, onOpen, onClose }: UseDisclosure = useDisclosure(); 
   useEffect(() => {
@@ -37,27 +44,43 @@ function Navbar() {
 
   const { scrollYProgress } = useScroll();
 
+  
+  useEffect(() => {
+    const scrollHeader = () => {
+      if(window.scrollY >= 20) {
+        setShowNavbar(true)
+      } else {
+        setShowNavbar(false)
+      }
+    }
+    window.addEventListener('scroll', scrollHeader);
+    return () => {
+      window.removeEventListener('scroll', scrollHeader);
+    }
+
+  }, []);
+
   return (
-    <motion.div  className='w-full flex items-start flex-col fixed z-40 ease-in-out'>
-      <nav className=" bg-white shadow-lg h-[90px] w-full px-10 flex items-center justify-between text-gray-600">
-        <div className="text-xl font-bold h-12 w-12">
-          <Image src={Logo} alt="logo" className=" w-full h-full" />
-        </div>
+    <motion.div  className={`  fixed w-full flex items-start flex-col z-40 ease-in-out`}>
+      <nav className={`${showNavbar===true? 'bg-white shadow-lg text-gray-600 h-[90px] ease-in duration-300' : isGray===true?'bg-transparent text-gray-600 font-extrabold h-[82px] ease-out duration-300' : 'bg-transparent text-white font-extrabold h-[82px] ease-out duration-300'} w-full px-10 flex items-center justify-between`}>
+        <a href='/' className="text-xl font-bold h-12 w-12">
+          <Image src={Logo} alt="logo" className={`w-full h-full ${showNavbar===false ? 'opacity-50' : ''}`} />
+        </a>
         <div className="hidden lg:flex items-center justify-end space-x-5">
-          <div className='flex items-center space-x-1 hover:-translate-y-1 hover:font-semibold text-gray-600 hover:text-blue-600 transition-all duration-300'>
-            <FiHome className='text-lg' />
+          <div className='flex items-center space-x-1 hover:-translate-y-1 hover:font-semibold hover:text-blue-600 transition-all duration-300'>
+            <FiHome className={`text-lg ${showNavbar===false? 'hidden' : 'inline-flex'}`} />
             <h3 className="text-md"><a href="./">home</a></h3>
           </div>
-          <div className='flex items-center space-x-1 hover:-translate-y-1 hover:font-semibold text-gray-600 hover:text-blue-600 transition-all duration-300'>
-            <FiUsers className='text-lg' />
+          <div className='flex items-center space-x-1 hover:-translate-y-1 hover:font-semibold hover:text-blue-600 transition-all duration-300'>
+            <FiUsers className={`text-lg ${showNavbar===false? 'hidden' : 'inline-flex'}`} />
             <h3 className="text-md"><a href="./about">profile</a></h3>
           </div>
-          <div className='flex items-center space-x-1 hover:-translate-y-1 hover:font-semibold text-gray-600 hover:text-blue-600 transition-all duration-300'>
-            <TbNews className='text-lg' />
+          <div className='flex items-center space-x-1 hover:-translate-y-1 hover:font-semibold hover:text-blue-600 transition-all duration-300'>
+            <TbNews className={`text-lg ${showNavbar===false? 'hidden' : 'inline-flex'}`} />
             <h3 className="text-md"><a href="./news">berita</a></h3>
           </div>
-          <div className='flex items-center space-x-1 hover:-translate-y-1 hover:font-semibold text-gray-600 hover:text-blue-600 transition-all duration-300'>
-            <IoImagesOutline className='text-lg' />
+          <div className='flex items-center space-x-1 hover:-translate-y-1 hover:font-semibold hover:text-blue-600 transition-all duration-300'>
+            <IoImagesOutline className={`text-lg ${showNavbar===false? 'hidden' : 'inline-flex'}`} />
             <h3 className="text-md"><a href="./gallery">galeri</a></h3>
           </div>
           <motion.a

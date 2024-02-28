@@ -61,9 +61,9 @@ const [ref, inView] = useInView()
     
     className="bg-gray-100 w-screen min-h-screen overflow-x-hidden">
       {/* navbar */}
-      <Navbar />
+      <Navbar isGray={false} />
       {/* heading */}
-      <div className="bg-gray-300 z-20 w-full h-screen mt-[90px] relative m-0 p-0 overflow-x-hidden">
+      <div className="bg-gray-300 z-20 w-full h-screen relative m-0 p-0 overflow-x-hidden">
       <Swiper 
         centeredSlides={true}
         autoplay={{

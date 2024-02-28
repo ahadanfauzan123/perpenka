@@ -43,7 +43,7 @@ function Gallery() {
      
       return (
             <div className='bg-gray-100 w-screen min-h-screen overflow-x-hidden text-gray-600'>
-                  <Navbar />
+                  <Navbar isGray={true} />
                   <div className='w-[80vw] mx-auto flex flex-col space-y-12 mt-[110px]'>
                         {/* heading */}
                         <div className='flex items-center space-x-3'>
