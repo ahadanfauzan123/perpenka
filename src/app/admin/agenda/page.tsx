@@ -119,7 +119,7 @@ export default function AddAgenda() {
               headerToolbar={{
                 left: 'prev,next today',
                 center: 'title',
-                right: 'resourceTimelineWook, dayGridMonth'
+                right: 'resourceTimelineWook, dayGridMonth, dayGridWeek'
               }}
               events={allEvents as EventSourceInput}
               nowIndicator={true}

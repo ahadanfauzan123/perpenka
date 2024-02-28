@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,15 +18,19 @@
   }
 } */
 
-body {
-  /* color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
+
+/* body {
     overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+} */
+body {
+  @apply font-montserrat overflow-x-hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+*::-webkit-scrollbar {
+  display: none;
 }
 
 @layer utilities {
@@ -41,6 +47,11 @@ input {
     
     @apply space-x-8;
 }
+
+a:hover > .arrow {
+  @apply scale-[1.2] transition-all text-white duration-300 ease-in-out transform translate-x-2;
+}
+
 
 .fc-day {
   @apply m-8;

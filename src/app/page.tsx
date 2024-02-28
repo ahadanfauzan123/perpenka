@@ -7,6 +7,8 @@ import Navbar from "../../components/navbar";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Calendar from 'react-calendar';
 
+import CountUp from 'react-countup';
+
 import { motion, useAnimation, Variants, useScroll } from "framer-motion"// React
 import { inView } from "framer-motion"
 import { useInView } from "react-intersection-observer";
@@ -22,6 +24,7 @@ import 'react-calendar/dist/Calendar.css';
 
 import FeaturedImageGallery from "../../components/featuredImageGallery";
 import Footer from "../../components/footer";
+import AnimatedCounter from  "../../components/counter";
 import WhatsApp from "../../components/whatsapp";
 import Banner1 from "../../public/img/4.jpg"
 import Banner2 from "../../public/img/5.png"
@@ -91,30 +94,30 @@ const [ref, inView] = useInView()
       </Swiper>
       </div>
       {/* section 2  bg-[#ff7f00]*/}
-      <div className="w-full flex flex-col bg-[#1c2d8c] from-[#ff7f00] to-[#ed831a]">
-        <div className=" w-[80vw] mx-auto h-[80vh] flex items-center justify-between">
+      <div className="w-full flex py-[60px] flex-col bg-[#1c2d8c] ">
+        <div className=" w-[80vw] mx-auto min-h-[80vh] lg:h-[80vh] flex flex-col space-y-8 lg:space-y-0 lg:flex-row items-center justify-between">
           <motion.div 
           // animate={{ x: 100 }}
           initial="offscreen"
           whileInView="onscreen"
-          viewport={{ once: false, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.8 }}
           variants={cardVariants}
           className="flex-[0.50] flex flex-col space-y-3">
-            <h1 className="text-6xl font-extrabold text-gray-50 ">tentang <span className="text-[#ff7f00]">perpenka</span></h1>
+            <h1 className="text-6xl font-bold text-gray-50 ">tentang <span className="text-[#ff7f00]">perpenka</span></h1>
             <p className=" text-gray-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolores quis, laborum aperiam ducimus possimus! Recusandae error dolorem quae esse officiis molestias explicabo voluptatum laborum. Tempore eaque labore molestiae corporis, qui neque, non, nulla provident voluptate rerum quas beatae eum?</p>
             <div className="flex flex-col space-y-4">
               <div className="w-full h-1 rounded bg-gray-50 opacity-75"></div>
               <div className="flex items-center space-x-8">
                 <div className="flex flex-col items-center space-y-2">
-                  <h1 className="text-3xl font-extrabold text-gray-50">5000<span>+</span></h1>
+                  <h1 className="text-3xl font-extrabold text-gray-50"><AnimatedCounter from={0} to={5000} /><span>+</span></h1>
                   <p className="text-md font-light text-gray-50">peserta</p>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
-                  <h1 className="text-3xl font-extrabold text-gray-50">20<span>+</span></h1>
+                  <h1 className="text-3xl font-extrabold text-gray-50"><AnimatedCounter from={0} to={20} /><span>+</span></h1>
                   <p className="text-md font-light text-gray-50">acara tahunan</p>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
-                  <h1 className="text-3xl font-extrabold text-gray-50">50<span>+</span></h1>
+                  <h1 className="text-3xl font-extrabold text-gray-50"><AnimatedCounter from={0} to={50} /><span>+</span></h1>
                   <p className="text-md font-light text-gray-50">kota/kabupaten</p>
                 </div>
               </div>
@@ -125,9 +128,9 @@ const [ref, inView] = useInView()
         </div>
       </div>
       {/* section 3 */}
-      <div className="w-[80vw] mx-auto h-screen flex flex-col space-y-4 items-center mt-10">
+      <div className="w-[80vw] mx-auto min-h-screen lg:h-screen flex flex-col space-y-4 items-center mt-10">
         <h1 className="text-4xl font-extrabold text-gray-600">LATEST NEWS</h1>
-        <div className="flex items-center justify-center space-x-5 w-full h-[80%]">
+        <div className="flex flex-col lg:flex-row items-center justify-center space-x-0 space-y-5 lg:space-y-0 lg:space-x-5 w-full h-[80%]">
           <Card judul="judul 1"  />
           <Card judul="judul 2"  />
           <Card judul="judul 3"  />

@@ -1,93 +1,21 @@
 "use client"
-import React, { useState } from 'react'
-
-import { OrganizationChart } from 'primereact/organizationchart';
-import { TreeNode } from 'primereact/treenode';
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// import required modules
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
         
 import Navbar from '../../../components/navbar'
 
-export default function About() {
 
-      const [selection, setSelection] = useState<TreeNode[]>([]);
-      const [data] = useState<TreeNode[]>([
-                {
-                    expanded: true,
-                    type: 'person',
-                    data: {
-                        image: 'https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png',
-                        name: 'Amy Elsner',
-                        title: 'CEO'
-                    },
-                    children: [
-                        {
-                            expanded: true,
-                            type: 'person',
-                            data: {
-                                image: 'https://primefaces.org/cdn/primereact/images/avatar/annafali.png',
-                                name: 'Anna Fali',
-                                title: 'CMO'
-                            },
-                            children: [
-                                {
-                                    label: 'Sales'
-                                },
-                                {
-                                    label: 'Marketing'
-                                }
-                            ]
-                        },
-                        {
-                            expanded: true,
-                            type: 'person',
-                            data: {
-                                image: 'https://primefaces.org/cdn/primereact/images/avatar/stephenshaw.png',
-                                name: 'Stephen Shaw',
-                                title: 'CTO'
-                            },
-                            children: [
-                                {
-                                    expanded: true,
-                            type: 'person',
-                            data: {
-                                image: 'https://primefaces.org/cdn/primereact/images/avatar/stephenshaw.png',
-                                name: 'Stephen Shaw',
-                                title: 'CTO'
-                            },
-                            children: [{}]
-                                },
-                                {
-                                    label: 'UI/UX Design'
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]);
-        
-            const nodeTemplate = (node: TreeNode) => {
-                if (node.type === 'person') {
-                    return (
-                        <div className="flex flex-column bg-white ring-1 ring-gray-500 rounded-lg">
-                            <div className="flex flex-col items-center w-[200px] h-[240px]">
-                                <div className='h-[70%] w-full rounded-lg bg-gray-400'>
-                                </div>
-                                <span className="font-bold mb-2">{node.data.name}</span>
-                                <span>{node.data.title}</span>
-                            </div>
-                        </div>
-                    );
-                }else if (node.label) {
-                  return (
-                        <div className='bg-white ring-1 ring-gray-500  text-gray-600 px-4 py-2  rounded-lg'>
-                              <h1>
-                                    {node.label}
-                              </h1>
-                        </div>
-                  );
-              }
-          
-              return null;
-            };
+export default function About() {
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
       
   return (
       <div className="bg-gray-100 w-screen min-h-screen overflow-x-hidden text-gray-600">
@@ -130,12 +58,100 @@ export default function About() {
                                     <div className='w-1 h-[40px] rounded bg-orange-300'></div>
                                     <h1 className='text-gray-600 text-[24px] font-extrabold'>STRUKTUR</h1>
                               </div>
-                              <div className="card overflow-x-auto py-5">
-                                    <OrganizationChart value={data} selectionMode="multiple" selection={selection} onSelectionChange={(e) => setSelection(e.data)} nodeTemplate={nodeTemplate} />
-                              </div>
+                              <div className="card w-full py-5">
+                                <Swiper
+                                        onSwiper={setThumbsSwiper}
+                                        loop={true}
+                                        // spaceBetween={2}
+                                        slidesPerView={8}
+                                        freeMode={true}
+                                        watchSlidesProgress={true}
+                                        modules={[FreeMode, Navigation, Thumbs]}
+                                        className="mySwiper"
+                                    >
+                                        <SwiperSlide>
+                                            <div className=" rounded-l-xl cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[10vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 1
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className=" cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[10vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 2
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className=" cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[10vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 3
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className=" cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[10vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 4
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className=" cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[10vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 5
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className=" cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[10vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 6
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className=" cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[10vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 7
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="rounded-r-xl cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[10vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 8
+                                            </div>
+                                        </SwiperSlide>
+                                        
+                                </Swiper>
+                                <Swiper
+                                    // style={{
+                                    // '--swiper-navigation-color': '#fff',
+                                    // '--swiper-pagination-color': '#fff',
+                                    // }}
+                                    loop={true}
+                                    spaceBetween={10}
+                                    // navigation={true}
+                                    thumbs={{ swiper: thumbsSwiper }}
+                                    modules={[FreeMode, Navigation, Thumbs]}
+                                    className="mySwiper2 mt-3"
+                                >
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    </SwiperSlide>
+                                </Swiper>
+                            </div>
+                        </div>
                         </div>
                   </div>
             </div>
-      </div>
   )
 }
