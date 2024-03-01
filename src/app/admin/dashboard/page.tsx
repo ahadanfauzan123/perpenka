@@ -4,11 +4,13 @@ import React from 'react'
 import Sidebar from '../../../../components/admin/sidebar'
 import Topbar from '../../../../components/admin/topbar'
 
-
-
+import { NewsContext } from "../../../../context/NewsContext";
+import { useContext } from "react"
 
 
 function AdminDashboard() {
+  const {users} = useContext(NewsContext)
+  console.log(users)
   return (
     <div className='w-screen min-h-screen bg-purple-200 flex text-gray-600'>
       {/* sidebar */}

@@ -2,56 +2,84 @@
 import React, {useState, ChangeEvent} from 'react'
 import Sidebar from '../../../../../components/admin/sidebar'
 import Topbar from '../../../../../components/admin/topbar'
+import AddPhotoBanner from '../../../../../components/admin/addPhotoBanner';
+import AddPhotoGallery from '../../../../../components/admin/addPhotoGallery';
 
 import { LuUploadCloud } from "react-icons/lu";
 import { Input, Text } from '@chakra-ui/react';
+import { Tab } from '@headlessui/react'
+
+function classNames(...classes: (string | undefined | null | false | 0)[]) {
+      return classes.filter(Boolean).join(' ')
+}
 
 function AddPhoto() {
-      const [value, setValue] = useState<string>('');
-
-      const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
-      setValue(event.target.value);
-      };
+      
   return (
       <div className='w-screen min-h-screen bg-blue-100 flex text-gray-600'>
             {/* sidebar */}
             <Sidebar />
-            <div className="w-[80%] min-h-screen ml-auto flex flex-col ">
+            <div className="w-full xl:w-[80%] min-h-screen ml-auto flex flex-col">
                   {/* topbar */}
                   <Topbar />
                   {/* body */}
                   <div className='pt-[90px] min-h-[calc(100vh-90px)] w-full  '>
-                        <div className='w-full h-screen flex items-center justify-start flex-col space-y-3'>       
-                              <div className="flex items-center justify-center w-[60%]">
-                              <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-64 bg-white border-4 border-gray-300 border-dashed rounded-lg cursor-pointer">
-                                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                          <LuUploadCloud className='text-gray-300 text-7xl' />
-                                          <p className="mb-2 text-sm text-gray-500 dark:text-gray-400"><span className="font-semibold">Click to upload</span> or drag and drop</p>
-                                          <p className="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-                                    </div>
-                                    <input id="dropzone-file" type="file" className="hidden" />
-                              </label>
-                              </div> 
-                              {/* heading */}
-                              <div className='bg-white w-[60%] h-[100px] rounded-lg px-4 py-1'>
-                                    <Text mb='8px' className='text-2xl '>title</Text>
-                                    <Input
-                                    value={value}
-                                    onChange={handleChange}
-                                    placeholder='Tambah Judul untuk Banner..'
-                                    size='sm'
-                                    className='bg-transparent font-semibold placeholder:text-gray-300 h-[50px] w-full ring-0 outline-0 border-0 text-xl'
-                                    />
+                  <Tab.Group>
+                        <Tab.List className="flex space-x-1 rounded-xl rounded-t-none bg-orange-600/40 p-1">
+                              {/* banner header */}
+                              <Tab
+                              className={({ selected }) =>
+                              classNames(
+                                    'w-full rounded-lg py-2.5 text-sm font-medium leading-5',
+                                    ' focus:outline-none ring-0',
+                                    selected
+                                    ? 'bg-white text-gray-600 text-lg shadow ease-linear duration-300'
+                                    : 'text-blue-100 hover:bg-white/[0.12] hover:text-white'
+                              )
+                              }
+                              >
+                              banner
+                              </Tab>
+                              {/* gallery header */}
+                              <Tab
+                              className={({ selected }) =>
+                              classNames(
+                                    'w-full rounded-lg py-2.5 text-sm font-medium leading-5',
+                                    ' focus:outline-none ring-0',
+                                    selected
+                                    ? 'bg-white text-gray-600 text-lg shadow ease-linear duration-300'
+                                    : 'text-blue-100 hover:bg-white/[0.12] hover:text-white'
+                              )
+                              }
+                              >
+                              gallery
+                              </Tab>
+                        </Tab.List>
+                        <Tab.Panels className="mt-[40px] w-[100%] mx-auto">
+                        {/* banner panel */}
+                              <Tab.Panel
+                              className={classNames(
+                              'rounded-xl w-full p-3 flex flex-col space-y-5',
+                              ' focus:outline-none'
+                              )}
+                              >
+                              <div className='flex items-center w-[60%] mx-auto space-x-3'>
+                                    <div className='w-1 h-[40px] rounded bg-blue-400'></div>
+                                    <h1 className='text-gray-600 text-3xl font-extrabold'>tambah foto banner</h1>
                               </div>
-                              {/* preview */}
-                              <div className='w-[60%] flex flex-col space-y-4'>
-                                    <h1 className='text-2xl'>preview</h1>
-                                    <div className='relative bg-white w-full h-64 rounded-lg flex items-center justify-center'>
-                                          <div className='absolute top-0 left-0 bg-gray-300 rounded-lg w-full h-full z-10'></div>
-                                          <h1 className='font-extrabold text-2xl z-30 w-[55%] text-center'>{value}</h1>
-                                    </div>
-                              </div>
-                        </div>
+                              <AddPhotoBanner />
+                        </Tab.Panel>
+                        {/* gallery panel */}
+                              <Tab.Panel
+                              className={classNames(
+                              'rounded-xl w-full p-3',
+                              ' focus:outline-none'
+                              )}
+                              >
+                              ini untuk galeri
+                        </Tab.Panel>
+                        </Tab.Panels>
+                  </Tab.Group>
                   </div>
             </div>
       </div>

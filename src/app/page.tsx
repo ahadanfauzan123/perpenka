@@ -30,10 +30,17 @@ import Banner1 from "../../public/img/4.jpg"
 import Banner2 from "../../public/img/5.png"
 import Banner3 from "../../public/img/3.jpg"
 
+import { NewsContext } from "../../context/NewsContext";
+import { useContext } from "react";
+
 type ValuePiece = Date | null;
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
 export default function Home() {
+
+  const {posts} = useContext(NewsContext);
+  console.log(posts, "🔥")
+
   const exampleVariant = {
     visible: { opacity: 1 },
     hidden: { opacity: 0 },
@@ -131,9 +138,10 @@ const [ref, inView] = useInView()
       <div className="w-[80vw] mx-auto min-h-screen lg:h-screen flex flex-col space-y-4 items-center mt-10">
         <h1 className="text-4xl font-extrabold text-gray-600">LATEST NEWS</h1>
         <div className="flex flex-col lg:flex-row items-center justify-center space-x-0 space-y-5 lg:space-y-0 lg:space-x-5 w-full h-[80%]">
-          <Card judul="judul 1"  />
-          <Card judul="judul 2"  />
-          <Card judul="judul 3"  />
+          {posts.map(post => (
+          <Card key={post.id} post={post.data.body} judul={post.data.title}  />
+          
+          ))}
         </div>
       </div>
       {/* section 4 */}

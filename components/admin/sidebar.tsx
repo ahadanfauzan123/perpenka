@@ -14,7 +14,7 @@ import Image from 'next/image';
 
 function Sidebar() {
   return (
-      <div className='bg-white w-[20%] min-h-screen fixed left-0 top-0 px-3 py-6 pt-0 flex flex-col'>
+      <div className='bg-white hidden w-[20%] min-h-screen fixed left-0 top-0 px-3 py-6 pt-0 xl:flex flex-col'>
             {/* logo and title */}
             <div className='w-full h-[90px] flex items-center justify-center space-x-2'>
                   <Image src={Logo} alt='logo' className='w-12 h-12' />

@@ -4,16 +4,20 @@ import React, { Fragment, useEffect, useRef, useState } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa6'
 
+type CounterProps = {
+      users: string;
+    };
+
 function Topbar() {
   return (
-      <div className='bg-white w-[80%] ml-auto h-[90px] px-6 fixed top-0 right-0 flex items-center justify-between'>
+      <div className='bg-white w-full xl:w-[80%] ml-auto h-[90px] px-6 fixed top-0 right-0 flex items-center justify-between'>
             <div>
                   haloo
             </div>
             <Menu as="div" className="relative inline-block text-left">
                   <div>
                   <Menu.Button className="inline-flex w-full items-center justify-center space-x-2 rounded-full px-4 py-2 text-sm font-medium focus:outline-none">
-                        <span className='font-semibold'>@admin123</span>
+                        <span className='font-semibold'>admin</span>
                         <div className='bg-gray-400 h-8 w-8 rounded-full '></div>
                   </Menu.Button>
                   </div>

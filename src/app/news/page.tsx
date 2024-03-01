@@ -3,6 +3,7 @@ import Navbar from '../../../components/navbar'
 import NewsCard from '../../../components/newsCard'
 
 function News() {
+      
   return (
       <div className="bg-gray-100 w-screen min-h-screen overflow-x-hidden text-gray-600">
             <Navbar isGray={true} />

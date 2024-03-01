@@ -62,7 +62,7 @@ function Navbar({isGray}: UseColorProps) {
 
   return (
     <motion.div  className={`  fixed w-full flex items-start flex-col z-40 ease-in-out`}>
-      <nav className={`${showNavbar===true? 'bg-white shadow-lg text-gray-600 h-[90px] ease-in duration-300' : isGray===true?'bg-transparent text-gray-600 font-extrabold h-[82px] ease-out duration-300' : 'bg-transparent text-white font-extrabold h-[82px] ease-out duration-300'} w-full px-10 flex items-center justify-between`}>
+      <nav className={`${showNavbar===true? 'bg-white shadow-lg text-gray-600 h-[90px] ease-in duration-300' : isGray===true?'bg-transparent text-gray-600 text-lg h-[82px] ease-out duration-300' : 'bg-transparent text-white text-lg h-[82px] ease-out duration-300'} w-full px-10 flex items-center justify-between`}>
         <a href='/' className="text-xl font-bold h-12 w-12">
           <Image src={Logo} alt="logo" className={`w-full h-full ${showNavbar===false ? 'opacity-50' : ''}`} />
         </a>
@@ -96,7 +96,7 @@ function Navbar({isGray}: UseColorProps) {
         <LuMenu className='cursor-pointer inline-flex lg:hidden text-2xl' onClick={onOpen}/>
         
         {isOpen == true? (
-          <div className='z-50 flex items-center justify-center lg:hidden absolute top-0 left-0 bg-white w-screen h-[60vh] transition-all ease-in-out duration-500'>
+          <div className='z-50 text-gray-600 flex items-center justify-center lg:hidden absolute top-0 left-0 bg-white w-screen h-[60vh] transition-all ease-in-out duration-500'>
             <div className='bg-white w-[85%] h-[95%] flex flex-col pb-3 space-y-4'>
               <div className='w-full flex justify-end'>
                 <MdClose className="text-xl" onClick={onClose} />
