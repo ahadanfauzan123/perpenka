@@ -10,7 +10,7 @@ type CounterProps = {
 
 function Topbar() {
   return (
-      <div className='bg-white w-full xl:w-[80%] ml-auto h-[90px] px-6 fixed top-0 right-0 flex items-center justify-between'>
+      <div className='z-30 bg-white w-full xl:w-[80%] ml-auto h-[90px] px-6 fixed top-0 right-0 flex items-center justify-between'>
             <div>
                   haloo
             </div>

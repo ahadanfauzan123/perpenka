@@ -27,7 +27,7 @@ function DataBerita() {
                   <div className='w-[60%] flex flex-col space-y-3 mx-auto'>
                   {posts.map(post => (
                         <>
-                        <NewsCard key={post.id} body={post.data.body} postedOn={String(post.data.postedOn)} judul={post.data.title}  />
+                        {/* <NewsCard key={post.id} body={post.data.body} postedOn={String(post.data.postedOn)} judul={post.data.title}  /> */}
             
                         </>
           

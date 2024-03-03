@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../../components/navbar'
 import NewsCard from '../../../components/newsCard'
+import Footer from '../../../components/footer'
 
 function News() {
       
@@ -14,13 +15,14 @@ function News() {
                         <h1 className='text-gray-600 text-3xl font-extrabold'>NEWS</h1>
                   </div>
                   {/* body */}
-                  <div className='w-full flex flex-col space-y-2'>
+                  <div className='w-full flex flex-col space-y-3 lg:space-y-2'>
                         <NewsCard />  
                         <NewsCard />  
                         <NewsCard />  
                         {/* <div classNameName='w-[350px] h-[350px] bg-blue-400'></div> */}
                   </div>
             </div>
+            <Footer  />
       </div>
   )
 }

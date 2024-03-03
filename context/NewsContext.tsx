@@ -6,11 +6,13 @@ import {db} from '../firebase'
 type NewsContextType = {
       users: any[]; // Sesuaikan dengan tipe data yang sebenarnya
       posts: any[]; // Sesuaikan dengan tipe data yang sebenarnya
+      agendas: any[]; // Sesuaikan dengan tipe data yang sebenarnya
   }
   
   const initialContext: NewsContextType = {
       users: [],
-      posts: []
+      posts: [],
+      agendas: [],
   }
   
   const NewsContext = createContext<NewsContextType>(initialContext);
@@ -21,6 +23,7 @@ type NewsContextType = {
 const NewsProvider = ({children}: NewsProviderProps) => {
       const [users, setUsers] = useState<any[]>([])
       const [posts, setPosts] = useState<any[]>([])
+      const [agendas, setAgendas] = useState<any[]>([])
       
       useEffect(() => {
             const getUsers = async () => {
@@ -39,6 +42,24 @@ const NewsProvider = ({children}: NewsProviderProps) => {
       getUsers()
       }, [])
       useEffect(() => {
+            const getAgenda = async () => {
+                  const querySnapshot = await getDocs(collection(db, 'agenda'));
+                  setAgendas(querySnapshot.docs.map(doc => {
+                        return {
+                              id: doc.id,
+                              data: {
+                                    name: doc.data().name,
+                                    description: doc.data().description,
+                                    startDate: doc.data().startDate,
+                                    dueDate: doc.data().DueDate,
+                              }
+                        }
+                  }))
+            }
+            getAgenda()
+
+      }, [])
+      useEffect(() => {
             const getPosts = async () => {
                   const querySnapshot = await getDocs(collection(db, 'articles'));
                   setPosts(querySnapshot.docs.map(doc => {
@@ -50,7 +71,7 @@ const NewsProvider = ({children}: NewsProviderProps) => {
                                     category: doc.data().category,
                                     bannerImage: doc.data().bannerImage,
                                     title: doc.data().title,
-                                    postedOn: doc.data().postedOn.toDate(),
+                                    postedOn: doc.data().postedOn,
                                     author: doc.data().author,
                               }
                         }
@@ -60,7 +81,7 @@ const NewsProvider = ({children}: NewsProviderProps) => {
 
       }, [])
 return (
-      <NewsContext.Provider value={{ posts,users }}>
+      <NewsContext.Provider value={{ posts,users,agendas }}>
             {children}
       </NewsContext.Provider>
 )

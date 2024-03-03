@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../../../components/navbar';
+import Footer from '../../../components/footer';
 
 function Gallery() {
       const data = [
@@ -63,6 +64,7 @@ function Gallery() {
                         ))}
                         </div>
                   </div>
+                  <Footer />
             </div>
       );
     }

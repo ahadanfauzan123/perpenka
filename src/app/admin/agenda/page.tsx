@@ -3,37 +3,51 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin, { Draggable, DropArg } from '@fullcalendar/interaction'
 import timeGridPlugin from '@fullcalendar/timegrid'
-import { Fragment, useEffect, useState } from 'react'
+import { FormEvent, Fragment, useContext, useEffect, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { CheckIcon, ExclamationTriangleIcon } from '@heroicons/react/20/solid'
-import { EventSourceInput } from '@fullcalendar/core/index.js'
+import { EventInput, EventSourceInput } from '@fullcalendar/core/index.js'
+import { collection, addDoc, getDocs, deleteDoc, doc, serverTimestamp, Timestamp } from 'firebase/firestore';
+import { db } from '../../../../firebase'
+import { NewsContext } from '../../../../context/NewsContext'
+import Sidebar from '../../../../components/admin/sidebar'
+import Topbar from '../../../../components/admin/topbar'
 
 
 interface Event {
   title: string;
+  description: string;
   start: Date | string;
+  end: Date | string;
   allDay: boolean;
   id: number;
 }
+// interface Agenda {
+//   id: string;
+//   name: string;
+//   description: string;
+//   startDate: Timestamp;
+//   dueDate: Timestamp;
+// }
 
 export default function AddAgenda() {
-  const [events, setEvents] = useState([
-    { title: 'event 1', id: '1' },
-    { title: 'event 2', id: '2' },
-    { title: 'event 3', id: '3' },
-    { title: 'event 4', id: '4' },
-    { title: 'event 5', id: '5' },
-  ])
   const [allEvents, setAllEvents] = useState<Event[]>([])
   const [showModal, setShowModal] = useState(false)
   const [showDeleteModal, setShowDeleteModal] = useState(false)
   const [idToDelete, setIdToDelete] = useState<number | null>(null)
   const [newEvent, setNewEvent] = useState<Event>({
     title: '',
+    description:'',
     start: '',
+    end: '',
     allDay: false,
     id: 0
   })
+  const [name, setName] = useState<string>("")
+  const [description, setDescription] = useState<string>("")
+  const [startDate, setStartDate] = useState<string>("")
+  const [dueDate, setDueDate] = useState<string>("")
+  const {agendas} = useContext(NewsContext);
 
   useEffect(() => {
     let draggableEl = document.getElementById('draggable-el')
@@ -49,23 +63,61 @@ export default function AddAgenda() {
       })
     }
   }, [])
+  useEffect(() => {
+    const fetchAgendas = async (): Promise<void> => {
+      try {
+        const querySnapshot = await getDocs(collection(db, 'agenda'));
+        const datas = querySnapshot.docs.map(doc => {
+          return {
+                id: doc.id,
+                data: {
+                      name: doc.data().name,
+                      description: doc.data().description,
+                      startDate: doc.data().startDate,
+                      dueDate: doc.data().DueDate,
+                }
+          }
+        });
+
+        const formattedEvents: Event[] = datas.map(agenda => ({
+          title: agenda.data.name,
+          description: agenda.data.description,
+          start: agenda.data.startDate.toDate(),
+          end: agenda.data.dueDate.toDate(),
+          allDay: true,
+          id: 0
+        }));
+
+        setAllEvents(formattedEvents);
+      } catch (error) {
+        console.error('Error fetching agendas:', error);
+      }
+    };
+
+    fetchAgendas();
+  }, []);
 
   function handleDateClick(arg: { date: Date, allDay: boolean }) {
-    setNewEvent({ ...newEvent, start: arg.date, allDay: arg.allDay, id: new Date().getTime() })
+    setNewEvent({ ...newEvent, start: arg.date, end: arg.date, description: "deskripsi", allDay: arg.allDay, id: new Date().getTime() })
     setShowModal(true)
   }
 
+
+
   function addEvent(data: DropArg) {
-    const event = { ...newEvent, start: data.date.toISOString(), title: data.draggedEl.innerText, allDay: data.allDay, id: new Date().getTime() }
+    const event = { ...newEvent, start: data.date.toISOString(), end: data.date.toISOString(), title: data.draggedEl.innerText, description: "deskripsi", allDay: data.allDay, id: new Date().getTime() }
     setAllEvents([...allEvents, event])
   }
 
   function handleDeleteModal(data: { event: { id: string } }) {
+  // function handleDeleteModal() {
     setShowDeleteModal(true)
+    console.log(Number(data.event.id))
     setIdToDelete(Number(data.event.id))
   }
 
-  function handleDelete() {
+
+  async function handleDelete() {
     setAllEvents(allEvents.filter(event => Number(event.id) !== Number(idToDelete)))
     setShowDeleteModal(false)
     setIdToDelete(null)
@@ -75,7 +127,9 @@ export default function AddAgenda() {
     setShowModal(false)
     setNewEvent({
       title: '',
+      description:'',
       start: '',
+      end: '',
       allDay: false,
       id: 0
     })
@@ -84,32 +138,49 @@ export default function AddAgenda() {
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    
     setNewEvent({
       ...newEvent,
-      title: e.target.value
+      title: e.target.value,
     })
+    
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setAllEvents([...allEvents, newEvent])
     setShowModal(false)
     setNewEvent({
       title: '',
+      description:'',
       start: '',
+      end: '',
       allDay: false,
       id: 0
     })
+    const dateStart = Timestamp.fromDate(new Date(startDate))
+    const dateEnd = Timestamp.fromDate(new Date(dueDate))
+    await addDoc(collection(db, "agenda"), {
+      name: newEvent.title,
+      description: description,
+      startDate: dateStart,
+      DueDate: dateEnd,
+    })
+    handleCloseModal()
+    
   }
 
   return (
     <>
-      <nav className="flex justify-between mb-12 border-b border-violet-100 p-4">
-        <h1 className="font-bold text-2xl text-gray-700">Agenda</h1>
-      </nav>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <div className="grid grid-cols-10">
-          <div className="col-span-8">
+      <div className='w-screen min-h-screen bg-blue-100 flex text-gray-600'>
+      {/* sidebar */}
+      <Sidebar />
+      <div className="w-full xl:w-[80%] min-h-screen ml-auto flex flex-col">
+            {/* topbar */}
+            <Topbar />
+      <main className="flex mt-[140px] min-h-screen w-full flex-col items-center justify-between">
+        <div className="w-[90%] mx-auto mt-6">
+          <div className="w-full z-20">
             <FullCalendar
               plugins={[
                 dayGridPlugin,
@@ -132,18 +203,20 @@ export default function AddAgenda() {
               eventClick={(data) => handleDeleteModal(data)}
             />
           </div>
-          <div id="draggable-el" className="ml-8 w-full border-2 p-2 rounded-md mt-16 lg:h-1/2 bg-violet-50">
+          {/* <div id="draggable-el" className="ml-8 w-full border-2 p-2 rounded-md mt-16 lg:h-1/2 bg-violet-50">
             <h1 className="font-bold text-lg text-center">Drag Agenda</h1>
-            {events.map(event => (
+            {agendas.map(agenda => (
               <div
                 className="fc-event border-2 p-1 m-2 w-full rounded-md ml-auto text-center bg-white"
-                title={event.title}
-                key={event.id}
+                key={agenda.id}
               >
-                {event.title}
+                <span>
+                  {agenda.data.name}
+                </span>
+                  
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <Transition.Root show={showDeleteModal} as={Fragment}>
@@ -161,7 +234,7 @@ export default function AddAgenda() {
               <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
             </Transition.Child>
 
-            <div className="fixed inset-0 z-10 overflow-y-auto">
+            <div className="fixed inset-0 z-40 overflow-y-auto">
               <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                 <Transition.Child
                   as={Fragment}
@@ -225,7 +298,7 @@ export default function AddAgenda() {
               <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
             </Transition.Child>
 
-            <div className="fixed inset-0 z-10 overflow-y-auto">
+            <div className="fixed inset-0 z-40 overflow-y-auto">
               <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                 <Transition.Child
                   as={Fragment}
@@ -254,11 +327,38 @@ export default function AddAgenda() {
                             sm:text-sm sm:leading-6"
                               value={newEvent.title} onChange={(e) => handleChange(e)} placeholder="Title" />
                           </div>
+                          <div className="mt-2">
+                            <input type="text" name="title" className="block w-full rounded-md border-0 py-1.5 text-gray-900 
+                            shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 
+                            focus:ring-2 
+                            focus:ring-inset focus:ring-violet-600 
+                            sm:text-sm sm:leading-6"
+                              value={description} onChange={e => setDescription(e.target.value)} placeholder="Description" />
+                          </div>
+                          <div className="mt-2 flex flex-col space-y-2 items-start">
+                            <span className='text-sm'>Tanggal Mulai : </span>
+                            <input type="datetime-local" name="title" className="block w-full rounded-md border-0 py-1.5 text-gray-900 
+                            shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 
+                            focus:ring-2 
+                            focus:ring-inset focus:ring-violet-600 
+                            sm:text-sm sm:leading-6"
+                              value={startDate} onChange={e => setStartDate(e.target.value)} placeholder="Description" />
+                          </div>
+                          <div className="mt-2 flex flex-col space-y-2 items-start">
+                            <span className='text-sm'>Tanggal selesai : </span>
+                            <input type="datetime-local" name="title" className="block w-full rounded-md border-0 py-1.5 text-gray-900 
+                            shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 
+                            focus:ring-2 
+                            focus:ring-inset focus:ring-violet-600 
+                            sm:text-sm sm:leading-6"
+                              value={dueDate} onChange={e => setDueDate(e.target.value)} placeholder="Description" />
+                          </div>
                           <div className="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
                             <button
                               type="submit"
                               className="inline-flex w-full justify-center rounded-md bg-violet-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 sm:col-start-2 disabled:opacity-25"
                               disabled={newEvent.title === ''}
+                              // onClick={addAgendaToFirebase}
                             >
                               tambah
                             </button>
@@ -281,6 +381,8 @@ export default function AddAgenda() {
           </Dialog>
         </Transition.Root>
       </main >
+      </div>
+      </div>
     </>
   )
 }

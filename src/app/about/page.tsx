@@ -11,6 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
         
 import Navbar from '../../../components/navbar'
+import Footer from '../../../components/footer';
 
 
 export default function About() {
@@ -28,6 +29,18 @@ export default function About() {
                   </div>
                   {/* body */}
                   <div className='w-full flex flex-col space-y-8'>
+                        {/* sejarah */}
+                        <div className='w-full flex flex-col space-y-3'>
+                              <div className='flex items-center space-x-3 bg-gray-200 w-[160px]'>
+                                    <div className='w-1 h-[40px] rounded bg-orange-300'></div>
+                                    <h1 className='text-gray-600 text-[24px] font-extrabold'>SEJARAH</h1>
+                              </div>
+                              <div className='w-full'>
+                                    <p className='text-justify text-lg font-light'>
+                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsa atque distinctio rem illo, et aspernatur repellat eum itaque vero voluptatibus, quia voluptas eveniet ut inventore doloribus molestias nostrum deserunt ipsam laborum! Repellendus!
+                                    </p>
+                              </div>
+                        </div>
                         {/* visi */}
                         <div className='w-full flex flex-col space-y-3'>
                               <div className='flex items-center space-x-3 bg-gray-200 w-[100px]'>
@@ -36,8 +49,11 @@ export default function About() {
                               </div>
                               <div className='w-full'>
                                     <p className='text-justify text-lg font-light'>
-                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsa atque distinctio rem illo, et aspernatur repellat eum itaque vero voluptatibus, quia voluptas eveniet ut inventore doloribus molestias nostrum deserunt ipsam laborum! Repellendus!
-                                    </p>
+                                        <span className='font-semibold'>
+                                            PERPENKA RUMAH KITA BERSAMA.&nbsp; 
+                                        </span>
+                                        Wadah untuk berhimpun bagi para pensiunan karyawan yang pernah bekerja di Perusahaan Kereta Api, yang didasari sebagai bagian keluarga besar Kereta Api  
+                                        </p>
                               </div>
                         </div>
                         {/* misi */}
@@ -48,8 +64,11 @@ export default function About() {
                               </div>
                               <div className='w-full'>
                                     <p className='text-justify text-lg font-light'>
-                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsa atque distinctio rem illo, et aspernatur repellat eum itaque vero voluptatibus, quia voluptas eveniet ut inventore doloribus molestias nostrum deserunt ipsam laborum! Repellendus!
-                                    </p>
+                                    <span className='font-semibold'>
+                                            MERAJUT GENERASI INSAN KERETA API.&nbsp;
+                                        </span>
+                                        Ungkapan tentang harapan dapat terus menjalin hubungan silaturahmi antara Senior dengan Juniornya sesama insan kereta api dalam berbagai hal, tak terbatas dalam hubungan sosial termasuk diantaranya berbagi pengetahuan - pengalaman sesuai dengan kompetensi yang  dimiliki PERPENKA
+                        </p>
                               </div>
                         </div>
                         {/* struktur */}
@@ -58,9 +77,10 @@ export default function About() {
                                     <div className='w-1 h-[40px] rounded bg-orange-300'></div>
                                     <h1 className='text-gray-600 text-[24px] font-extrabold'>STRUKTUR</h1>
                               </div>
-                              <div className="card w-full py-5">
+                              {/* xl */}
+                              <div className="card w-full py-5 hidden lg:block ">
                                 <Swiper
-                                        onSwiper={setThumbsSwiper}
+                                        // onSwiper={setThumbsSwiper}
                                         loop={true}
                                         // spaceBetween={2}
                                         slidesPerView={8}
@@ -148,10 +168,103 @@ export default function About() {
                                     <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
                                     </SwiperSlide>
                                 </Swiper>
+                                </div>
+                              {/* sm */}
+                              <div className="card w-full py-5 block lg:hidden ">
+                                <Swiper
+                                        // onSwiper={setThumbsSwiper}
+                                        loop={true}
+                                        // spaceBetween={2}
+                                        slidesPerView={4}
+                                        freeMode={true}
+                                        watchSlidesProgress={true}
+                                        modules={[FreeMode, Navigation, Thumbs]}
+                                        className="mySwiper"
+                                    >
+                                        <SwiperSlide>
+                                            <div className=" rounded-l-xl cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[20vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 1
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className=" cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[20vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 2
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className=" cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[20vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 3
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className=" cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[20vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 4
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className=" cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[20vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 5
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className=" cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[20vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 6
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className=" cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[20vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 7
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="rounded-r-xl cursor-pointer text-lg font-semibold hover:bg-gray-200 transition-all duration-300 w-[20vw] h-[55px] bg-white shadow-sm shadow-gray-400 flex items-center justify-center">
+                                                struktur 8
+                                            </div>
+                                        </SwiperSlide>
+                                        
+                                </Swiper>
+                                <Swiper
+                                    // style={{
+                                    // '--swiper-navigation-color': '#fff',
+                                    // '--swiper-pagination-color': '#fff',
+                                    // }}
+                                    loop={true}
+                                    spaceBetween={10}
+                                    // navigation={true}
+                                    thumbs={{ swiper: thumbsSwiper }}
+                                    modules={[FreeMode, Navigation, Thumbs]}
+                                    className="mySwiper2 mt-3"
+                                >
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    </SwiperSlide>
+                                </Swiper>
                             </div>
                         </div>
                         </div>
                   </div>
+                  <Footer />
             </div>
   )
 }

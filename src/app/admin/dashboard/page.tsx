@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import Sidebar from '../../../../components/admin/sidebar'
 import Topbar from '../../../../components/admin/topbar'
+import LoginAdmin from '../adminLogin/page'
 
 import { NewsContext } from "../../../../context/NewsContext";
 import { useContext } from "react"

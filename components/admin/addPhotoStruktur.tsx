@@ -5,7 +5,7 @@ import { LuUploadCloud } from "react-icons/lu";
 import { Input, Text } from '@chakra-ui/react';
 import { storage } from '../../firebase';
 import  {ref,   uploadBytesResumable, UploadTaskSnapshot} from 'firebase/storage'
-function AddPhotoGallery() {
+function AddPhotoStruktur() {
       const [value, setValue] = useState<string>('');
       const [image, setImage] = useState<File | null>(null);
 
@@ -57,4 +57,4 @@ function AddPhotoGallery() {
   )
 }
 
-export default AddPhotoGallery
+export default AddPhotoStruktur

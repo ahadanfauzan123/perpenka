@@ -8,6 +8,7 @@ import AddPhotoGallery from '../../../../../components/admin/addPhotoGallery';
 import { LuUploadCloud } from "react-icons/lu";
 import { Input, Text } from '@chakra-ui/react';
 import { Tab } from '@headlessui/react'
+import AddPhotoStruktur from '../../../../../components/admin/addPhotoStruktur';
 
 function classNames(...classes: (string | undefined | null | false | 0)[]) {
       return classes.filter(Boolean).join(' ')
@@ -54,6 +55,20 @@ function AddPhoto() {
                               >
                               gallery
                               </Tab>
+                              {/* Struktur header */}
+                              <Tab
+                              className={({ selected }) =>
+                              classNames(
+                                    'w-full rounded-lg py-2.5 text-sm font-medium leading-5',
+                                    ' focus:outline-none ring-0',
+                                    selected
+                                    ? 'bg-white text-gray-600 text-lg shadow ease-linear duration-300'
+                                    : 'text-blue-100 hover:bg-white/[0.12] hover:text-white'
+                              )
+                              }
+                              >
+                              struktur
+                              </Tab>
                         </Tab.List>
                         <Tab.Panels className="mt-[40px] w-[100%] mx-auto">
                         {/* banner panel */}
@@ -70,13 +85,22 @@ function AddPhoto() {
                               <AddPhotoBanner />
                         </Tab.Panel>
                         {/* gallery panel */}
-                              <Tab.Panel
+                        <Tab.Panel
                               className={classNames(
                               'rounded-xl w-full p-3',
                               ' focus:outline-none'
                               )}
                               >
-                              ini untuk galeri
+                              <AddPhotoGallery />
+                        </Tab.Panel>
+                        {/* gallery panel */}
+                        <Tab.Panel
+                              className={classNames(
+                              'rounded-xl w-full p-3',
+                              ' focus:outline-none'
+                              )}
+                              >
+                              <AddPhotoStruktur />
                         </Tab.Panel>
                         </Tab.Panels>
                   </Tab.Group>
