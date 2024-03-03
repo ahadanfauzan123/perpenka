@@ -1,0 +1,1127 @@
+[debug] [2024-03-03T16:10:32.114Z] ----------------------------------------------------------------------
+[debug] [2024-03-03T16:10:32.117Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ahadan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-03-03T16:10:32.117Z] CLI Version:   13.4.0
+[debug] [2024-03-03T16:10:32.118Z] Platform:      win32
+[debug] [2024-03-03T16:10:32.118Z] Node Version:  v21.6.1
+[debug] [2024-03-03T16:10:32.118Z] Time:          Sun Mar 03 2024 23:10:32 GMT+0700 (Western Indonesia Time)
+[debug] [2024-03-03T16:10:32.119Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-03T16:10:32.213Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-03T16:10:32.214Z] > authorizing via signed-in user (ahadanfauzan123@gmail.com)
+[debug] [2024-03-03T16:10:32.214Z] [iam] checking project perpenka-eedff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-03-03T16:10:32.217Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/perpenka-eedff:testIamPermissions [none]
+[debug] [2024-03-03T16:10:32.217Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/perpenka-eedff:testIamPermissions x-goog-quota-user=projects/perpenka-eedff
+[debug] [2024-03-03T16:10:32.217Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/perpenka-eedff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-03-03T16:10:33.441Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/perpenka-eedff:testIamPermissions 200
+[debug] [2024-03-03T16:10:33.442Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/perpenka-eedff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-03-03T16:10:33.442Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/perpenka-eedff [none]
+[debug] [2024-03-03T16:10:34.137Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/perpenka-eedff 200
+[debug] [2024-03-03T16:10:34.137Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/perpenka-eedff {"projectId":"perpenka-eedff","projectNumber":"127313653293","displayName":"perpenka","name":"projects/perpenka-eedff","resources":{"hostingSite":"perpenka-eedff","storageBucket":"perpenka-eedff.appspot.com","locationId":"asia-southeast2"},"state":"ACTIVE","etag":"1_6ae7178e-8212-46b1-b279-0c3c4f14ef4e"}
+[debug] [2024-03-03T16:10:39.872Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/perpenka-eedff/sites pageToken=&pageSize=10
+[debug] [2024-03-03T16:10:41.103Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/perpenka-eedff/sites 200
+[debug] [2024-03-03T16:10:41.103Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/perpenka-eedff/sites {"sites":[{"name":"projects/perpenka-eedff/sites/perpenka-eedff","defaultUrl":"https://perpenka-eedff.web.app","appId":"1:127313653293:web:057a85e1c322f95a0792a4","type":"DEFAULT_SITE"}]}
+[debug] [2024-03-03T16:10:41.104Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:127313653293:web:057a85e1c322f95a0792a4/config [none]
+[debug] [2024-03-03T16:10:42.425Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:127313653293:web:057a85e1c322f95a0792a4/config 200
+[debug] [2024-03-03T16:10:42.425Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:127313653293:web:057a85e1c322f95a0792a4/config {"projectId":"perpenka-eedff","appId":"1:127313653293:web:057a85e1c322f95a0792a4","storageBucket":"perpenka-eedff.appspot.com","locationId":"asia-southeast2","apiKey":"AIzaSyBZ1Oob-BxnfVgwlEmtWiSrhfg1bqOdDyk","authDomain":"perpenka-eedff.firebaseapp.com","messagingSenderId":"127313653293","measurementId":"G-KFW9PJLVE2"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-03-03T16:10:53.170Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/perpenka-eedff/sites/perpenka-eedff [none]
+[debug] [2024-03-03T16:10:53.946Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/perpenka-eedff/sites/perpenka-eedff 200
+[debug] [2024-03-03T16:10:53.946Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/perpenka-eedff/sites/perpenka-eedff {"name":"projects/perpenka-eedff/sites/perpenka-eedff","defaultUrl":"https://perpenka-eedff.web.app","appId":"1:127313653293:web:057a85e1c322f95a0792a4","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 14.1.0
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info] 
+./components/admin/addPhotoBanner.tsx
+76:49  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+76:49  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./components/featuredImageGallery.tsx
+34:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+43:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/newsCard.tsx
+8:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/about/page.tsx
+147:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+147:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+150:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+150:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+153:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+153:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+156:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+156:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+159:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+159:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+162:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+162:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+165:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+165:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+168:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+168:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+239:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+239:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+242:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+242:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+245:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+245:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+248:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+248:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+251:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+251:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+254:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+254:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+257:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+257:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+260:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+260:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/app/gallery/page.tsx
+58:31  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/not-found.tsx
+29:25  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/18) ...
+
+[info] [2024-03-03T16:11:46.349Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\adminLogin\page.js:1:5608)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 49079 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\adminLogin\page.js:27:550)
+
+Error occurred prerendering page "/admin/adminLogin". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\adminLogin\page.js:1:5608)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 49079 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\adminLogin\page.js:27:550)
+
+[info]    Generating static pages (4/18) 
+
+[info] [2024-03-03T16:11:46.468Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+
+Error occurred prerendering page "/_not-found". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+[2024-03-03T16:11:46.564Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 91991 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\page.js:1:281081)
+
+Error occurred prerendering page "/admin/agenda". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 91991 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\page.js:1:281081)
+
+[info] [2024-03-03T16:11:47.002Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+
+Error occurred prerendering page "/admin/galeri". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+
+[info] [2024-03-03T16:11:47.012Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:5583)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:4277)
+
+Error occurred prerendering page "/admin/agenda/share". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:5583)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:4277)
+
+[info] [2024-03-03T16:11:47.171Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 41360 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\galeri\addphoto\page.js:1:4022)
+
+Error occurred prerendering page "/admin/galeri/addphoto". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 41360 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\galeri\addphoto\page.js:1:4022)
+
+[info]    Generating static pages (8/18) 
+
+[info] [2024-03-03T16:11:47.770Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+
+Error occurred prerendering page "/admin/dashboard". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+
+[info] [2024-03-03T16:11:47.776Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:9405)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:8099)
+
+Error occurred prerendering page "/admin/news". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:9405)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:8099)
+
+[info] [2024-03-03T16:11:47.812Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 27922 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\news\add\page.js:1:3965)
+
+Error occurred prerendering page "/admin/news/add". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 27922 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\news\add\page.js:1:3965)
+
+[info] [2024-03-03T16:11:47.963Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:5521)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:4215)
+
+Error occurred prerendering page "/admin/users". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:5521)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:4215)
+
+[info] [2024-03-03T16:11:48.019Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:9405)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:8099)
+
+[info] [2024-03-03T16:11:48.082Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+
+[info] [2024-03-03T16:11:48.160Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:5521)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:4215)
+
+Error occurred prerendering page "/gallery". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:5521)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:4215)
+
+[info]    Generating static pages (13/18) 
+
+[info] 
+Error occurred prerendering page "/contact". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:9405)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:8099)
+
+[info] [2024-03-03T16:11:48.255Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:5521)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:4215)
+
+Error occurred prerendering page "/news". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:5521)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:4215)
+
+[info] [2024-03-03T16:11:48.272Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:9405)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:8099)
+
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:9405)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:8099)
+
+Error occurred prerendering page "/about". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+
+[info]  ✓ Generating static pages (18/18) 
+
+[info] 
+
+[info] > Export encountered errors on following paths:
+	/_not-found
+	/about/page: /about
+	/admin/adminLogin/page: /admin/adminLogin
+	/admin/agenda/page: /admin/agenda
+	/admin/agenda/share/page: /admin/agenda/share
+	/admin/dashboard/page: /admin/dashboard
+	/admin/galeri/addphoto/page: /admin/galeri/addphoto
+	/admin/galeri/page: /admin/galeri
+	/admin/news/add/page: /admin/news/add
+	/admin/news/page: /admin/news
+	/admin/users/page: /admin/users
+	/contact/page: /contact
+	/gallery/page: /gallery
+	/news/page: /news
+	/page: /
+
+[debug] [2024-03-03T16:11:49.196Z] Error: ENOENT: no such file or directory, open 'C:\xamppnew\htdocs\nextjs\perpenka\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-03-03T16:14:22.325Z] ----------------------------------------------------------------------
+[debug] [2024-03-03T16:14:22.336Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ahadan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only hosting
+[debug] [2024-03-03T16:14:22.337Z] CLI Version:   13.4.0
+[debug] [2024-03-03T16:14:22.337Z] Platform:      win32
+[debug] [2024-03-03T16:14:22.338Z] Node Version:  v21.6.1
+[debug] [2024-03-03T16:14:22.338Z] Time:          Sun Mar 03 2024 23:14:22 GMT+0700 (Western Indonesia Time)
+[debug] [2024-03-03T16:14:22.339Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-03T16:14:22.570Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-03T16:14:22.571Z] > authorizing via signed-in user (ahadanfauzan123@gmail.com)
+[debug] [2024-03-03T16:14:22.571Z] [iam] checking project perpenka-eedff for permissions ["firebase.projects.get"]
+[debug] [2024-03-03T16:14:22.574Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/perpenka-eedff:testIamPermissions [none]
+[debug] [2024-03-03T16:14:22.574Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/perpenka-eedff:testIamPermissions x-goog-quota-user=projects/perpenka-eedff
+[debug] [2024-03-03T16:14:22.574Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/perpenka-eedff:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-03-03T16:14:23.923Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/perpenka-eedff:testIamPermissions 200
+[debug] [2024-03-03T16:14:23.923Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/perpenka-eedff:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-03-03T16:14:23.924Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/perpenka-eedff [none]
+[debug] [2024-03-03T16:14:25.002Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/perpenka-eedff 200
+[debug] [2024-03-03T16:14:25.002Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/perpenka-eedff {"projectId":"perpenka-eedff","projectNumber":"127313653293","displayName":"perpenka","name":"projects/perpenka-eedff","resources":{"hostingSite":"perpenka-eedff","storageBucket":"perpenka-eedff.appspot.com","locationId":"asia-southeast2"},"state":"ACTIVE","etag":"1_6ae7178e-8212-46b1-b279-0c3c4f14ef4e"}
+[debug] [2024-03-03T16:14:25.005Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/perpenka-eedff [none]
+[debug] [2024-03-03T16:14:25.352Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/perpenka-eedff 200
+[debug] [2024-03-03T16:14:25.352Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/perpenka-eedff {"projectId":"perpenka-eedff","projectNumber":"127313653293","displayName":"perpenka","name":"projects/perpenka-eedff","resources":{"hostingSite":"perpenka-eedff","storageBucket":"perpenka-eedff.appspot.com","locationId":"asia-southeast2"},"state":"ACTIVE","etag":"1_6ae7178e-8212-46b1-b279-0c3c4f14ef4e"}
+[debug] [2024-03-03T16:14:32.199Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/perpenka-eedff/sites pageToken=&pageSize=10
+[debug] [2024-03-03T16:14:33.197Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/perpenka-eedff/sites 200
+[debug] [2024-03-03T16:14:33.197Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/perpenka-eedff/sites {"sites":[{"name":"projects/perpenka-eedff/sites/perpenka-eedff","defaultUrl":"https://perpenka-eedff.web.app","appId":"1:127313653293:web:057a85e1c322f95a0792a4","type":"DEFAULT_SITE"}]}
+[debug] [2024-03-03T16:14:33.198Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:127313653293:web:057a85e1c322f95a0792a4/config [none]
+[debug] [2024-03-03T16:14:35.045Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:127313653293:web:057a85e1c322f95a0792a4/config 200
+[debug] [2024-03-03T16:14:35.045Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:127313653293:web:057a85e1c322f95a0792a4/config {"projectId":"perpenka-eedff","appId":"1:127313653293:web:057a85e1c322f95a0792a4","storageBucket":"perpenka-eedff.appspot.com","locationId":"asia-southeast2","apiKey":"AIzaSyBZ1Oob-BxnfVgwlEmtWiSrhfg1bqOdDyk","authDomain":"perpenka-eedff.firebaseapp.com","messagingSenderId":"127313653293","measurementId":"G-KFW9PJLVE2"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[warn] !  This integration expects Node version 16, 18, or 20. You're running version 21, problems may be encountered. 
+[debug] [2024-03-03T16:15:43.091Z] ----------------------------------------------------------------------
+[debug] [2024-03-03T16:15:43.095Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ahadan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-03-03T16:15:43.095Z] CLI Version:   13.4.0
+[debug] [2024-03-03T16:15:43.095Z] Platform:      win32
+[debug] [2024-03-03T16:15:43.095Z] Node Version:  v21.6.1
+[debug] [2024-03-03T16:15:43.096Z] Time:          Sun Mar 03 2024 23:15:43 GMT+0700 (Western Indonesia Time)
+[debug] [2024-03-03T16:15:43.096Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-03T16:15:43.187Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-03T16:15:43.187Z] > authorizing via signed-in user (ahadanfauzan123@gmail.com)
+[debug] [2024-03-03T16:15:43.188Z] [iam] checking project perpenka-eedff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-03-03T16:15:43.190Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/perpenka-eedff:testIamPermissions [none]
+[debug] [2024-03-03T16:15:43.190Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/perpenka-eedff:testIamPermissions x-goog-quota-user=projects/perpenka-eedff
+[debug] [2024-03-03T16:15:43.190Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/perpenka-eedff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-03-03T16:15:45.870Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/perpenka-eedff:testIamPermissions 200
+[debug] [2024-03-03T16:15:45.870Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/perpenka-eedff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-03-03T16:15:45.871Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/perpenka-eedff [none]
+[debug] [2024-03-03T16:15:46.994Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/perpenka-eedff 200
+[debug] [2024-03-03T16:15:46.994Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/perpenka-eedff {"projectId":"perpenka-eedff","projectNumber":"127313653293","displayName":"perpenka","name":"projects/perpenka-eedff","resources":{"hostingSite":"perpenka-eedff","storageBucket":"perpenka-eedff.appspot.com","locationId":"asia-southeast2"},"state":"ACTIVE","etag":"1_6ae7178e-8212-46b1-b279-0c3c4f14ef4e"}
+[debug] [2024-03-03T16:15:52.494Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/perpenka-eedff/sites pageToken=&pageSize=10
+[debug] [2024-03-03T16:15:53.437Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/perpenka-eedff/sites 200
+[debug] [2024-03-03T16:15:53.437Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/perpenka-eedff/sites {"sites":[{"name":"projects/perpenka-eedff/sites/perpenka-eedff","defaultUrl":"https://perpenka-eedff.web.app","appId":"1:127313653293:web:057a85e1c322f95a0792a4","type":"DEFAULT_SITE"}]}
+[debug] [2024-03-03T16:15:53.438Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:127313653293:web:057a85e1c322f95a0792a4/config [none]
+[debug] [2024-03-03T16:15:55.007Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:127313653293:web:057a85e1c322f95a0792a4/config 200
+[debug] [2024-03-03T16:15:55.008Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:127313653293:web:057a85e1c322f95a0792a4/config {"projectId":"perpenka-eedff","appId":"1:127313653293:web:057a85e1c322f95a0792a4","storageBucket":"perpenka-eedff.appspot.com","locationId":"asia-southeast2","apiKey":"AIzaSyBZ1Oob-BxnfVgwlEmtWiSrhfg1bqOdDyk","authDomain":"perpenka-eedff.firebaseapp.com","messagingSenderId":"127313653293","measurementId":"G-KFW9PJLVE2"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-03-03T16:16:05.766Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/perpenka-eedff/sites/perpenka-eedff [none]
+[debug] [2024-03-03T16:16:07.230Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/perpenka-eedff/sites/perpenka-eedff 200
+[debug] [2024-03-03T16:16:07.231Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/perpenka-eedff/sites/perpenka-eedff {"name":"projects/perpenka-eedff/sites/perpenka-eedff","defaultUrl":"https://perpenka-eedff.web.app","appId":"1:127313653293:web:057a85e1c322f95a0792a4","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 14.1.0
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info] 
+./components/admin/addPhotoBanner.tsx
+76:49  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+76:49  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./components/featuredImageGallery.tsx
+34:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+43:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/newsCard.tsx
+8:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/about/page.tsx
+147:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+147:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+150:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+150:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+153:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+153:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+156:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+156:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+159:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+159:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+162:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+162:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+165:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+165:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+168:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+168:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+239:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+239:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+242:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+242:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+245:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+245:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+248:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+248:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+251:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+251:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+254:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+254:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+257:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+257:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+260:37  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+260:37  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/app/gallery/page.tsx
+58:31  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/not-found.tsx
+29:25  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/18) ...
+
+[info] [2024-03-03T16:16:48.886Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\_not-found.js:1:5243)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\_not-found.js:1:3937)
+
+Error occurred prerendering page "/_not-found". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\_not-found.js:1:5243)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\_not-found.js:1:3937)
+
+[info] [2024-03-03T16:16:48.947Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+
+Error occurred prerendering page "/about". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+[2024-03-03T16:16:48.930Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 91991 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\page.js:1:281081)
+
+Error occurred prerendering page "/admin/agenda". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 91991 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\page.js:1:281081)
+
+[info]    Generating static pages (4/18) 
+
+[info] [2024-03-03T16:16:49.643Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+
+Error occurred prerendering page "/admin/dashboard". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+
+[info] [2024-03-03T16:16:49.645Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:5583)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:4277)
+
+Error occurred prerendering page "/admin/agenda/share". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:5583)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:4277)
+
+[info]    Generating static pages (8/18) 
+
+[info] [2024-03-03T16:16:49.829Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+
+Error occurred prerendering page "/admin/galeri". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+
+[info] [2024-03-03T16:16:49.841Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:9405)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:8099)
+
+Error occurred prerendering page "/admin/news". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:9405)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\467.js:1:8099)
+[2024-03-03T16:16:49.886Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:5583)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 41360 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\galeri\addphoto\page.js:1:4022)
+
+[info] 
+Error occurred prerendering page "/admin/galeri/addphoto". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:5583)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 41360 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\galeri\addphoto\page.js:1:4022)
+
+[info] [2024-03-03T16:16:49.972Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:5521)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:4215)
+
+[info] 
+Error occurred prerendering page "/admin/users". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:5521)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:4215)
+
+[info] [2024-03-03T16:16:50.003Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 27922 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\news\add\page.js:1:3965)
+
+[info] [2024-03-03T16:16:50.038Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:5583)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:4277)
+
+Error occurred prerendering page "/contact". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:5583)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:4277)
+
+[info]    Generating static pages (13/18) 
+
+[info] 
+Error occurred prerendering page "/admin/news/add". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 27922 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\news\add\page.js:1:3965)
+
+[info] [2024-03-03T16:16:50.089Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:5521)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:4215)
+
+Error occurred prerendering page "/news". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:5521)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:4215)
+
+[info] [2024-03-03T16:16:50.134Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+
+Error occurred prerendering page "/gallery". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:7799)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\314.js:1:6493)
+
+[info] [2024-03-03T16:16:50.149Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:5583)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:4277)
+
+[info] 
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:5583)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 84141 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\agenda\share\page.js:1:4277)
+
+[info] [2024-03-03T16:16:50.219Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context).
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:5521)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 49079 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\adminLogin\page.js:27:550)
+
+[info] 
+Error occurred prerendering page "/admin/adminLogin". Read more: https://nextjs.org/docs/messages/prerender-error
+
+ReferenceError: window is not defined
+    at eG (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:676:550)
+    at tA (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:934)
+    at i.instanceFactory (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1702)
+    at o.getOrInitializeService (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2773)
+    at o.initialize (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:226:2148)
+    at tc (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1330)
+    at tl (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\chunks\222.js:721:1151)
+    at 73437 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\users\page.js:1:5521)
+    at t (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\webpack-runtime.js:1:143)
+    at 49079 (C:\xamppnew\htdocs\nextjs\perpenka\.next\server\app\admin\adminLogin\page.js:27:550)
+
+[info]  ✓ Generating static pages (18/18) 
+
+[info] 
+
+[info] > Export encountered errors on following paths:
+	/_not-found
+	/about/page: /about
+	/admin/adminLogin/page: /admin/adminLogin
+	/admin/agenda/page: /admin/agenda
+	/admin/agenda/share/page: /admin/agenda/share
+	/admin/dashboard/page: /admin/dashboard
+	/admin/galeri/addphoto/page: /admin/galeri/addphoto
+	/admin/galeri/page: /admin/galeri
+	/admin/news/add/page: /admin/news/add
+	/admin/news/page: /admin/news
+	/admin/users/page: /admin/users
+	/contact/page: /contact
+	/gallery/page: /gallery
+	/news/page: /news
+	/page: /
+
+[debug] [2024-03-03T16:16:50.627Z] Error: ENOENT: no such file or directory, open 'C:\xamppnew\htdocs\nextjs\perpenka\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
