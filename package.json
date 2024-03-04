@@ -22,6 +22,7 @@
     "@material-tailwind/react": "^2.1.9",
     "firebase": "^10.8.1",
     "framer-motion": "^11.0.5",
+    "netlify-plugin-cache": "^1.0.3",
     "next": "14.1.0",
     "primereact": "^10.5.1",
     "react": "^18",
@@ -45,5 +46,11 @@
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5.3.3"
+  }, 
+  "cache": {
+    "directories" : [
+      "node_modules",
+      ".next/cache"
+    ]
   }
 }
