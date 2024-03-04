@@ -3,10 +3,11 @@ import Image from 'next/image'
 import React from 'react'
 import Sidebar from '../../../../components/admin/sidebar'
 import Topbar from '../../../../components/admin/topbar'
-import LoginAdmin from '../adminLogin/page'
 
 import { NewsContext } from "../../../../context/NewsContext";
 import { useContext } from "react"
+import AdminCard from '../../../../components/admin/adminCard'
+import Table from '../../../../components/admin/tableUser'
 
 
 function AdminDashboard() {
@@ -21,8 +22,28 @@ function AdminDashboard() {
             <Topbar />
             {/* body */}
             <div className='mt-[90px] min-h-[calc(100vh-90px)] w-full '>
-                  <div className='w-full h-screen bg-blue-400'></div>
-                  <div className='w-full h-screen bg-green-400'></div>
+            <div className='bg-theme'>
+        <div className='text-color grid grid-cols-4mobile:gid-cols-1 bg-transparent w-full max-w-6xl mx-auto p-5'>
+            <div className='col-span-4 p-3 flex flex-col gap-y-8'>
+                {/* cards */}
+                {/* <AdminCard/> */}
+                {/* salary/times & also admin */}
+                {/* <div className='flex flex-col space-y-6 laptop:space-y-0 items-center laptop:flex-row justify-between mt-8 space-x-0 laptop:space-x-4'>
+                    <Salary/>
+                    <AdminUser/>
+
+                </div> */}
+                {/* charts */}
+                {/* <Chart /> */}
+                {/* history table */}
+                <Table/>
+                {/* product list limit + button */}
+            </div>
+            <div>
+                {/* notification */}
+            </div>
+        </div>
+    </div>
             </div>
       </div>
     </div>
