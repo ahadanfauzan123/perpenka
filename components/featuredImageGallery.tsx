@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Logo from "../public/img/logo.jpg";
 function FeaturedImageGallery() {
   const data = [
     {
@@ -31,18 +32,18 @@ function FeaturedImageGallery() {
   return (
     <div className="grid gap-4 w-[80vw] mx-auto">
       <div>
-        <img
+        <Image
           className="h-[70vh] w-full rounded-lg object-cover object-center md:h-[480px]"
-          src={active}
+          src={Logo}
           alt=""
         />
       </div>
       <div className="grid grid-cols-5 gap-4 w-full mx-auto">
         {data.map(({ imgelink }, index) => (
           <div key={index}>
-            <img
+            <Image
               onClick={() => setActive(imgelink)}
-              src={imgelink}
+              src={Logo}
               className="h-20 w-[200px] cursor-pointer rounded-lg object-cover object-center"
               alt="gallery-image"
             />

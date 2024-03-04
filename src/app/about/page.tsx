@@ -2,8 +2,10 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import Logo from "../../../public/img/logo.jpg";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -81,7 +83,7 @@ export default function About() {
                               {/* xl */}
                               <div className="card w-full py-5 hidden lg:block ">
                                 <Swiper
-                                        onSwiper={() => setThumbsSwiper}
+                                        // onSwiper={setThumbsSwiper}
                                         loop={true}
                                         // spaceBetween={2}
                                         slidesPerView={8}
@@ -145,28 +147,28 @@ export default function About() {
                                     className="mySwiper2 mt-3"
                                 >
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src={Logo} />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src={Logo} />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src={Logo} />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src={Logo} />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src={Logo} />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src={Logo} />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src={Logo} />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src={Logo} />
                                     </SwiperSlide>
                                 </Swiper>
                                 </div>
@@ -237,28 +239,28 @@ export default function About() {
                                     className="mySwiper2 mt-3"
                                 >
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src="https://blog-static.mamikos.com/wp-content/uploads/2021/07/4.-contoh-struktur-organisasi-1024x594-1024x594.jpg" />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                    <img className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
+                                    <Image alt="set" className='w-full h-auto max-h-screen rounded-xl' src="https://runsystem.id/wp-content/uploads/2023/10/struktur-organisasi-runs_2023.png" />
                                     </SwiperSlide>
                                 </Swiper>
                             </div>
