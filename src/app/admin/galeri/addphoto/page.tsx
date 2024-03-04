@@ -5,8 +5,6 @@ import Topbar from '../../../../../components/admin/topbar'
 import AddPhotoBanner from '../../../../../components/admin/addPhotoBanner';
 import AddPhotoGallery from '../../../../../components/admin/addPhotoGallery';
 
-import { LuUploadCloud } from "react-icons/lu";
-import { Input, Text } from '@chakra-ui/react';
 import { Tab } from '@headlessui/react'
 import AddPhotoStruktur from '../../../../../components/admin/addPhotoStruktur';
 

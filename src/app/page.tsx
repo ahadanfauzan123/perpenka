@@ -15,7 +15,6 @@ import { useInView } from "react-intersection-observer";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import './styles.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 //react calendar
 import 'react-calendar/dist/Calendar.css';

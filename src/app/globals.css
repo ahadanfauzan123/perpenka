@@ -89,3 +89,52 @@ a:hover > .arrow {
   @apply bg-orange-400 border border-orange-400 ;
   
 }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.react-calendar__navigation__arrow {
+  flex-grow: 0.7;
+  font-weight: bold;
+  border-radius: 8px;
+}
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-decoration: none;
+}
+button {
+  margin: 3px;
+  background-color: #6f876f;
+  border: 0;
+  border-radius: 3px;
+  color: rgb(82, 79, 79);
+  padding: 5px 0;
+
+  &:hover {
+    background-color: #4282b0;
+  }
+
+  &:active {
+    background-color: #4289e6;
+  }
+}
