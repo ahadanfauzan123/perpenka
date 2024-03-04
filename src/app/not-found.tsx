@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 function NotFound() {
@@ -26,7 +27,7 @@ function NotFound() {
                   </div>
 
                   <div className="relative w-full mt-12 lg:w-1/2 lg:mt-0">
-                        <img className="w-full max-w-lg lg:mx-auto" src="https://merakiui.com/images/components/illustration.svg" alt="" />
+                        <Image alt="home" className="w-full max-w-lg lg:mx-auto" src="https://merakiui.com/images/components/illustration.svg" />
                   </div>
             </div>
       </div>

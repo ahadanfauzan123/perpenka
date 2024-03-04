@@ -7,8 +7,6 @@ import Navbar from "../../components/navbar";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Calendar from 'react-calendar';
 
-import CountUp from 'react-countup';
-
 import { motion, useAnimation, Variants, useScroll } from "framer-motion"// React
 import { inView } from "framer-motion"
 import { useInView } from "react-intersection-observer";

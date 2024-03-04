@@ -16,6 +16,7 @@ import Footer from '../../../components/footer';
 
 export default function About() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [thumbsSwiperOne, setThumbsSwiperOne] = useState(null);
 
       
   return (
@@ -80,7 +81,7 @@ export default function About() {
                               {/* xl */}
                               <div className="card w-full py-5 hidden lg:block ">
                                 <Swiper
-                                        // onSwiper={setThumbsSwiper}
+                                        onSwiper={() => setThumbsSwiper}
                                         loop={true}
                                         // spaceBetween={2}
                                         slidesPerView={8}
@@ -172,7 +173,7 @@ export default function About() {
                               {/* sm */}
                               <div className="card w-full py-5 block lg:hidden ">
                                 <Swiper
-                                        // onSwiper={setThumbsSwiper}
+                                        onSwiper={() => setThumbsSwiperOne}
                                         loop={true}
                                         // spaceBetween={2}
                                         slidesPerView={4}
