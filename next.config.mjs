@@ -2,10 +2,10 @@
 const nextConfig = {
       images: {
             unoptimized: true,
-      },
-      experimental:{
-            cache: true,
       }
+      // experimental:{
+      //       cache: true,
+      // }
 };
 
 
