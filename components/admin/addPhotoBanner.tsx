@@ -5,6 +5,7 @@ import { LuUploadCloud } from "react-icons/lu";
 import { Input, Text } from '@chakra-ui/react';
 import { storage } from '../../firebase';
 import  {ref,   uploadBytesResumable, UploadTaskSnapshot} from 'firebase/storage'
+import Image from 'next/image';
 function AddPhotoBanner() {
       const [value, setValue] = useState<string>('');
       const [image, setImage] = useState<File | null>(null);
@@ -73,7 +74,7 @@ function AddPhotoBanner() {
                                     <h1 className='text-2xl'>preview</h1>
                                     <div className='relative bg-white w-full h-64 rounded-lg flex items-center justify-center'>
                                           {urlImage? (
-                                                <img src={urlImage.toString()} className='absolute top-0 left-0 bg-gray-300 rounded-lg w-full h-full z-10' />
+                                                <Image alt='set' src={urlImage.toString()} className='absolute top-0 left-0 bg-gray-300 rounded-lg w-full h-full z-10' />
 
                                           ) : (
                                                 <div></div>
